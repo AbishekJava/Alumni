@@ -1,0 +1,23 @@
+<!--<button type="button" class="btn btn-success" routerLink="/addgallery">
+      <i class="far fa-calendar-alt"></i>Add New Event</button>-->
+<div class="mt-5">
+  <div class="mt-5 d-flex justify-content-center align-items-center flex-column">
+    <h2>Events Page</h2>
+    <div class="col-sm-18 me-8">
+      <div class="mt-8">
+        <div class="card me-20 mt-5" style="width: 40rem;" *ngFor="let list of event">
+
+          <img src="{{list.image_url}}" class="card-img-top" alt="image not found">
+          <div class="card-body">
+            <h5 class="card-title">{{list.topic}}</h5>
+            <p class="card-text">{{list.description}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 ">
+
+    </div>
+  </div>
+</div>

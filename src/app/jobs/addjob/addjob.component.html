@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Job Update Form</h5>
+        <button type="button" class="btn-close" routerLink="/jobs" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="jobupdateform" class="row g-3 mt-7" >
+            <div class="col-md-12">
+                <label  class="form-control-label">Company Name</label>
+                <input formControlName="companyname" type="text" class="form-control" id="companyname" required>
+            </div>
+            <div class="col-md-12">
+                <label  class="form-control-label">Vacancies</label>
+                <input formControlName="vacant" type="text" class="form-control" id="vacant" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Work Mode</label>
+                <input formControlName="workmode" type="text" class="form-control" id="workmode" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Education</label>
+                <input type="text" class="form-control" formControlName="edu" id="edu" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Experience</label>
+                <input formControlName="experie" type="text" class="form-control" id="experie" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Skills</label>
+                <input formControlName="skills" type="text" class="form-control" id="skills" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Salary</label>
+                <input formControlName="salary" type="text" class="form-control" id="salary" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Location</label>
+                <input formControlName="location" type="text" class="form-control" id="location" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Lastdate</label>
+                <input formControlName="lastdate" type="date" class="form-control" id="lastdate" required>
+            </div>
+            <div class="col-md-6">
+                <label  class="form-control-label">Link</label>
+                <input formControlName="link" type="text" class="form-control" id="link" required>
+            </div>
+            <div class="col-md-6 mt-4">
+                <button type="submit" (click)="updateJobs()"class="btn btn-outline-primary px-5">Submit</button>
+                <button type="button" routerLink="/jobs" class="btn btn-secondary px-3 ms-2">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="mt-3 d-flex justify-content-center align-items-center flex-column">
+  <h4>There are a total {{ getTotalAlumni() }} alumnes here</h4>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="card me-2 mb-3 " style="width: 20rem;" *ngFor="let list of alumni">
+        <img src="{{list.imageurl}}" class="card-img-top" alt="image not found" height="200" width="200">
+        <div class="card-body ">
+          <h5 class="card-title">Name: {{list.username }}</h5>
+          <p class="card-text">City: {{list.city}}</p>
+          <p class="card-text">Position: {{list.currentposition}}</p>
+          <p class="card-text">Graduation Year: {{list.graduationyear}}</p>
+          <p class="card-text">Monile Number: {{list.mobilenumber}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="col-sm-2">
+  
+</div>

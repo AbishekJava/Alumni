@@ -1,0 +1,16 @@
+<div class="mt-3 d-flex justify-content-center align-items-center flex-column">
+  <h3>Gallery Page</h3>
+  <button type="button" class="btn btn-success mt-5" routerLink="/addgallery">
+    <i class="fas fa-images fa-3x"></i>Add Gallery</button>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-4" *ngFor="let item of gallery">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{item.imageurl}}"width="200" height="200" alt="Description">
+          <!-- You can add other card content here if needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

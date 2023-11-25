@@ -1,0 +1,9 @@
+.table-row-hover:hover {
+    background-color: #9c7d7d;
+}
+.body {
+    background-image:url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Application_Software.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,50 @@
+<div class="mt-2 d-flex justify-content-center align-items-center flex-column">
+    
+    <p>Total {{ getTotalList() }} Jobs Availabe in our portal</p>
+</div>
+<table class="table table-striped table-bordered mt-3">
+    <thead>
+        <tr>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">company Name</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">vacancies</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">work mode</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">qualification</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">experience(Years)</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">Required skills</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">salary</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">job location</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">last date</td>
+            <td class="text-center" style="background-color: #336699; color: #ffffff;">link</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Job of jobs" class="table-row-hover">
+            <td class="text-center">{{Job.companyname}}</td>
+            <td class="text-center">{{Job.vacant}}</td>
+            <td class="text-center">{{Job.workmode}}</td>
+            <td class="text-center">{{Job.edu}}</td>
+            <td class="text-center">{{Job.experie}}</td>
+            <td class="text-center">{{Job.skills}}</td>
+            <td class="text-center">{{Job.salary}}</td>
+            <td class="text-center">{{Job.location}}</td>
+            <td class="text-center">{{Job.lastdate}}</td>
+            <td class="text-center">
+                <a href="{{Job.link}}" target="_blank">
+                    <button class="btn btn-danger">Apply</button>
+                </a>
+            <td>
+                <button class="btn btn-info" (click)="deleteJobs(Job.sno)">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+
+</table>
+<div class="mt-2 d-flex justify-content-center align-items-center flex-column">
+        <button type="button" class="btn btn-success mt-3" routerLink="/addjob">
+        <i class="fas fa-briefcase"></i>Add New Job</button>
+</div>
+
+<!--<div>
+    <button class="btn btn-info" routerLink="/home">home page</button>
+</div>-->

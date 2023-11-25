@@ -1,0 +1,8 @@
+<div>
+    <h2>Add Gallery</h2>
+    <form [formGroup]="galleryupdateform" (ngSubmit)="updategallery()">
+      <label for="imageurl"></label>
+      <input type="text" id="imageurl" formControlName="imageurl" placeholder="Enter Image URL" />
+      <button type="submit" (click)="updategallery()">Update Gallery</button>
+    </form>
+  </div>
